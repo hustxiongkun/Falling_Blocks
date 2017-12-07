@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.2)
 PROJECT(Game_Framework)
 
 #3.set environment variable, 设置环境变量，编译用到的源文件全部都要放到这里，否则编译能通过，但是执行的时候会出现各种问题，比如"symbol lookup error xxx, undefined symbol"
-SET(INC_DIR ./third_party/include ./include)
+SET(INC_DIR ./third_party/include)
 SET(LINK_DIR ./third_party/libs)
 #SET(LIBS SDL2 SDL2main SDL2_ttf SDL2_image)
 
