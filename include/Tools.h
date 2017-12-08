@@ -27,7 +27,7 @@ public:
 	bool loadFromRenderedText(SDL_Renderer* renderer, std::string textureText, SDL_Color textColor);
 
 	// deallocates texture
-	void free();
+	void freeTexture();
 
 	// set color modulation
 	void setColor(Uint8 red, Uint8 green, Uint8 blue);
@@ -69,13 +69,13 @@ LTexture::LTexture(){
 
 LTexture::~LTexture(){
 	// deallocate
-	free();
+	freeTexture();
 }
 
 bool LTexture::loadFromFile(SDL_Renderer* renderer, std::string path)
 {
 	// get rid of preexisting texture
-	free();
+	freeTexture();
 
 	// the final texture
 	SDL_Texture* newTexture = NULL;
@@ -139,7 +139,7 @@ bool LTexture::loadFromRenderedText(SDL_Renderer* renderer, std::string textureT
 	return mTexture != NULL;
 }
 
-void LTexture::free(){
+void LTexture::freeTexture(){
 	// free texture if it exists
 	if (mTexture != NULL){
 		SDL_DestroyTexture(mTexture);

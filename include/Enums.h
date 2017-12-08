@@ -1,0 +1,22 @@
+//////////////////////////////////////////////////////////////////////////
+// Enums.h
+//////////////////////////////////////////////////////////////////////////
+
+#pragma once
+
+enum BlockTypes {
+	SQUARE_BLOCK,
+	L_BLOCK,
+	BACKWORDS_L_BLOCK,
+	T_BLOCK,
+	S_BLOCK,
+	BACKWARDS_S_BLOCK,
+	STRAIGHT_BLOCK,
+	BLOCK_TOTAL
+};
+
+enum Direction {
+	LEFT,
+	RIGHT,
+	DOWN
+};
